@@ -1,0 +1,14 @@
+Открываем папку в терминале
+
+1. Собираем образ:
+docker build . -t pg
+Запускаем:
+docker run --name pg -p 5432:5432  -d pg
+
+2. Добавляем данные через терминал, подключившись к контейнеру
+docker exec  -it pg psql -U postgres    
+CREATE DATABASE test2;
+  docker exec -it pg postgres -U postgres
+  
+3. Для сохранения данных используем команду
+docker run --name pg -p 5432:5432 -v /data/:/var/lib/postgres/data -d pg
