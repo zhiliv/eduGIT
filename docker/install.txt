@@ -3,7 +3,7 @@
 1. Собираем образ:
 docker build . -t pg
 Запускаем:
-docker run --name pg -p 5432:5432  -d pg
+docker run --rm --name pg -p 5432:5432  -d pg
 
 2. Добавляем данные через терминал, подключившись к контейнеру
 docker exec  -it pg psql -U postgres    
